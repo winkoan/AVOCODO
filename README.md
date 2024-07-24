@@ -1,5 +1,6 @@
 ![alt text](config/logo.png?raw=true)
-# AVOCODO
+# Audio/VideO CODing Optimization
+### AVOCODO
  A MATLAB-based GUI that optimizes the experience in audio/video coding EEG data.
 
 (Below is a temporary README)
