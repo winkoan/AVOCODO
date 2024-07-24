@@ -1,3 +1,4 @@
+![alt text](config/logo.png?raw=true)
 # AVOCODO
  A MATLAB-based GUI that optimizes the experience in audio/video coding EEG data.
 
