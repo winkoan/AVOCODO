@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<movieSyncs xmlns="http://www.egi.com/movieSyncs_mff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <movieSync>
+        <fileName>Subject1_baseline1_20240717_050925.mov</fileName>
+        <sampleBeginTime>335718</sampleBeginTime>
+        <sampleEndTime>1937853</sampleEndTime>
+        <videoBeginTime>0</videoBeginTime>
+        <videoEndTime>1.602134705</videoEndTime>
+        <category>-1</category>
+        <segment>-1</segment>
+    </movieSync>
+    <movieSync>
+        <fileName>Subject1_baseline1_20240717_050925_2.mov</fileName>
+        <sampleBeginTime>2204874</sampleBeginTime>
+        <sampleEndTime>188312189</sampleEndTime>
+        <videoBeginTime>0</videoBeginTime>
+        <videoEndTime>186.1073151</videoEndTime>
+        <category>-1</category>
+        <segment>-1</segment>
+    </movieSync>
+</movieSyncs>

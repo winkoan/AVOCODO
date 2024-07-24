@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>video host times</key>
+	<array>
+		<dict>
+			<key>NSARecording_error</key>
+			<string>None</string>
+			<key>NSARecording_startVID_minus_Amp</key>
+			<real>1.6248619556427002</real>
+			<key>_last_ns</key>
+			<integer>1183322891287</integer>
+			<key>_last_ns - _start_ns</key>
+			<string>00:00:01.602.018</string>
+			<key>_start_ns</key>
+			<integer>1181720872605</integer>
+			<key>camera</key>
+			<string>PTZ</string>
+			<key>filename</key>
+			<string>Subject1_baseline1_20240717_050925.mov</string>
+			<key>finishRecording host</key>
+			<integer>1183324919454</integer>
+			<key>frames_</key>
+			<integer>1155</integer>
+			<key>frames_video_</key>
+			<integer>1</integer>
+			<key>presentationTime</key>
+			<string>00:00:01.602.134</string>
+			<key>presentationTime_end</key>
+			<real>38.517768859863281</real>
+			<key>presentationTime_start</key>
+			<real>36.915634155273438</real>
+			<key>ptsOnsetEnd</key>
+			<real>40.46185302734375</real>
+			<key>ptsOnsetStart</key>
+			<real>38.859718322753906</real>
+			<key>streamingStartDate</key>
+			<date>2024-07-16T19:22:44Z</date>
+		</dict>
+		<dict>
+			<key>NSARecording_error</key>
+			<string>None</string>
+			<key>NSARecording_startVID_minus_Amp</key>
+			<real>1.6248619556427002</real>
+			<key>_last_ns</key>
+			<integer>1369691735693</integer>
+			<key>_last_ns - _start_ns</key>
+			<string>00:03:06.101.340</string>
+			<key>_start_ns</key>
+			<integer>1183590395094</integer>
+			<key>camera</key>
+			<string>PTZ</string>
+			<key>filename</key>
+			<string>Subject1_baseline1_20240717_050925_2.mov</string>
+			<key>finishRecording host</key>
+			<integer>1369693702806</integer>
+			<key>frames_</key>
+			<integer>6739</integer>
+			<key>frames_video_</key>
+			<integer>1</integer>
+			<key>presentationTime</key>
+			<string>00:03:06.107.315</string>
+			<key>presentationTime_end</key>
+			<real>224.89210510253906</real>
+			<key>presentationTime_start</key>
+			<real>38.7847900390625</real>
+			<key>ptsOnsetEnd</key>
+			<real>226.83618927001953</real>
+			<key>ptsOnsetStart</key>
+			<real>40.728874206542969</real>
+			<key>streamingStartDate</key>
+			<date>2024-07-16T19:22:44Z</date>
+		</dict>
+	</array>
+</dict>
+</plist>

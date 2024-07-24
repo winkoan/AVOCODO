@@ -1,0 +1,111 @@
+<?vlc
+
+  --
+  --  request.json   -*- mode: lua -*-
+  --
+  --  Created by Léa Strobino.
+  --  Copyright 2018. All rights reserved.
+  --
+
+  local json = require('dkjson')
+
+  local c = _GET['c']
+  local v = _GET['v']
+
+  if c then
+
+    -- process command
+
+    if c == 'add' then
+      vlc.playlist.add({{path = vlc.strings.make_uri(v)}})
+    elseif c == 'clear' then
+      vlc.playlist.clear()
+    elseif c == 'delete' then
+      vlc.playlist.delete(v)
+    elseif c == 'enqueue' then
+      vlc.playlist.enqueue({{path = vlc.strings.make_uri(v)}})
+    elseif c == 'fullscreen' then
+      if vlc.object.vout() then
+        vlc.video.fullscreen(v)
+      end
+    elseif c == 'loop' then
+      if vlc.playlist.loop(v) then
+        vlc.playlist.repeat_('off')
+      end
+    elseif c == 'move' then
+      local a = {}
+      for i in string.gmatch(v,"[^,]+") do
+        table.insert(a,i)
+      end
+      vlc.playlist.move(a[1],a[2])
+    elseif c == 'next' then
+      vlc.playlist.next()
+    elseif c == 'pause' then
+      if vlc.playlist.status() == 'playing' then
+        vlc.playlist.pause()
+      end
+    elseif c == 'play' then
+      vlc.playlist.play()
+    elseif c == 'prev' then
+      vlc.playlist.prev()
+    elseif c == 'quit' then
+      vlc.misc.quit()
+    elseif c == 'random' then
+      vlc.playlist.random(v)
+    elseif c == 'rate' then
+      vlc.var.set(vlc.object.playlist(),'rate',v)
+    elseif c == 'repeat' then
+      if vlc.playlist.repeat_(v) then
+        vlc.playlist.loop('off')
+      end
+    elseif c == 'seek' then
+      common.seek(v)
+    elseif c == 'stop' then
+      vlc.playlist.stop()
+    elseif c == 'volume' then
+      common.volume(v)
+    end
+
+  else
+
+    -- get status
+
+    local s = {}
+
+    s.fullscreen = vlc.var.get(vlc.object.playlist(),'fullscreen')
+    s.loop       = vlc.var.get(vlc.object.playlist(),'loop')
+    s.random     = vlc.var.get(vlc.object.playlist(),'random')
+    s.rate       = vlc.var.get(vlc.object.playlist(),'rate')
+    s['repeat']  = vlc.var.get(vlc.object.playlist(),'repeat')
+    s.status     = vlc.playlist.status()
+    s.version    = vlc.misc.version()
+    s.volume     = vlc.volume.get()
+
+    if vlc.object.input() then
+      s.current = {}
+      s.current.ID       = vlc.playlist.current()
+      s.current.Length   = vlc.var.get(vlc.object.input(),'length')
+      s.current.Position = vlc.var.get(vlc.object.input(),'time')
+      s.current.Meta     = vlc.input.item():metas()
+    end
+
+    s.playlist = {}
+    s.playlist.Content = {}
+    for i, child in ipairs(vlc.playlist.get().children[1].children) do
+      local item = {}
+      item.ID     = child.id
+      item.URI    = child.path
+      item.Length = child.duration
+      item.Title  = child.name
+      table.insert(s.playlist.Content,item)
+      if vlc.object.input() and item.ID == s.current.ID then
+        s.playlist.Position = i
+      end
+    end
+    s.playlist.Length = table.getn(s.playlist.Content)
+
+    print(json.encode(s))
+
+  end
+
+?>

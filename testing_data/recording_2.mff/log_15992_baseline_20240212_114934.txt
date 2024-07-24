@@ -1,0 +1,293 @@
+00:00:00.005.121: ENOLISController.mm:833 ENOLISController:getAmpStartTime: time 1707416810841007 - old time 1707416810466373 = 0.374634 seconds, ampID 0
+00:00:00.005.229: --- EEG START RECORDING ---------------------------------------------------------------------------------
+00:00:00.005.319:          Name: 15992_baseline_20240212_114934.mff
+00:00:00.005.423:          Date: 2024-02-08 10:40:14.421007 AM PST, unix 1707417614, micro 1707417614421007
+00:00:00.005.474:   Acquisition: 5.4.2 (r29917)
+00:00:00.005.556:      Mac OS X: 10.14.4 (18E2034)
+00:00:00.005.617:         Model: iMac19,1
+00:00:00.005.646:           GHz: 3.10
+00:00:00.005.717:  # Processors: 6
+00:00:00.005.748:        Memory: 16.00 GB
+00:00:00.005.770:           MFF: 3
+00:00:00.005.793:  Amp Serial #: A20131202
+00:00:00.005.816:      Amp Type: NA400
+00:00:00.005.862:  Amp Firmware: 2.0.14
+00:00:00.005.908:  Amp Channels: 128
+00:00:00.005.953:  Legacy Board: false
+00:00:00.005.995: Sensor Layout: HydroCel GSN 128 1.0
+00:00:00.006.024: Sampling Rate: 1000 s/s
+00:00:00.006.054:        Camera: AXIS M1065-L - B8A44F2EE8E2
+00:00:00.006.079:       Quality: Medium
+00:00:00.006.106:         Audio: On
+00:00:00.006.136: ---------------------------------------------------------------------------------------------------------
+00:00:00.035.894: NSAToolbarDelegate.m:803 NSAToolbarDelegate:updateInterface _onOff YES, _recordButton YES, _stopButton YES,
+00:00:00.036.119: NSARecording.m:313 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: signal blocks 0
+00:00:00.036.174: NSARecording.m:321 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: xml 0
+00:00:00.036.263: ENOLISController.mm:993 ENOLISController:getAmpDetails: 
+00:00:00.041.611: NSARecording.m:338 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: EEG shift: 36 ms - PNS shift: 3 ms = 33 ms
+00:00:00.041.675: NSARecording.m:339 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: EEG shift: 36 samples - PNS shift: 3 samples = 33 samples
+00:00:00.041.797: NSARecording.m:358 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: /Users/egi/Documents/Net Station User Data/Sessions/SIMONS-MIT/15992_baseline_20240212_114934.mff
+00:00:00.046.577: NSARecording.m:2084 NSARecording:writeInfo_EEG 
+00:00:00.046.653: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: GCAL 1 00:00:00.000
+00:00:00.046.995: NSARecording.m:2537 NSARecording:copySensorlayoutFile 
+00:00:00.047.036: NSARecording.m:2577 NSARecording:copyCoordinatesFile 
+00:00:00.047.033: NSARecording.m:2124 NSARecording:writeInfo_EEG
+00:00:00.047.930: NSARecording.m:3075 NSARecording:writeTRsPerVolume None
+00:00:00.048.082: NSARecording.m:3138 NSARecording:writeAcquiringXML 
+00:00:00.048.672: NSARecording.m:2084 NSARecording:writeInfo_EEG 
+00:00:00.048.737: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: GCAL 1 00:00:00.000
+00:00:00.049.074: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: ICAL 1 00:00:00.000
+00:00:00.049.487: NSARecording.m:313 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: signal blocks cache 1
+00:00:00.049.572: NSARecording.m:321 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: xml cache 1
+00:00:00.049.740: ENOLISController.mm:993 ENOLISController:getAmpDetails: 
+00:00:00.053.265: NSARecording.m:338 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: EEG shift: 36 ms - PNS shift: 3 ms = 33 ms
+00:00:00.053.327: NSARecording.m:339 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: EEG shift: 36 samples - PNS shift: 3 samples = 33 samples
+00:00:00.053.427: NSARecording.m:358 NSARecording:initAtPath:createIfNotFound:nsaController:startDate: /Users/egi/Documents/Net Station User Data/Sessions/SIMONS-MIT/Backups/15992_baseline_20240212_114934.mff
+00:00:00.058.347: NSARecording.m:2084 NSARecording:writeInfo_EEG 
+00:00:00.058.409: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: GCAL 1 00:00:00.000
+00:00:00.058.713: NSARecording.m:2537 NSARecording:copySensorlayoutFile 
+00:00:00.058.752: NSARecording.m:2577 NSARecording:copyCoordinatesFile 
+00:00:00.058.753: NSARecording.m:2124 NSARecording:writeInfo_EEG
+00:00:00.059.397: NSARecording.m:3075 NSARecording:writeTRsPerVolume None
+00:00:00.059.487: NSARecording.m:3138 NSARecording:writeAcquiringXML 
+00:00:00.059.933: NSARecording.m:2084 NSARecording:writeInfo_EEG 
+00:00:00.059.994: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: GCAL 1 00:00:00.000
+00:00:00.060.353: NSARecording.m:2173 NSARecording:appendCallibrations:ofType:withTimes:to: ICAL 1 00:00:00.000
+00:00:00.070.809: PLTECICommandDelegate.mm:120 time 1707416810841007 - old time 0 = 1707416810.841007 seconds
+00:00:00.070.891: PLTECICommandDelegate.mm:136 ampStartTime_micro_ 1707416810841007
+00:00:00.089.950: NSARecording.m:2549 00:00:00.089.950: NSARecording.m:2549 NSARecording:copySensorlayoutFile
+NSARecording:copySensorlayoutFile
+00:00:00.091.262: NSARecording.m:2595 NSARecording:copySensorlayoutFile
+00:00:00.091.289: NSARecording.m:2595 NSARecording:copySensorlayoutFile
+00:00:00.091.565: NSARecording.m:2390 NSARecording:writePatientInfo
+00:00:00.091.822: NSARecording.m:2390 NSARecording:writePatientInfo
+00:00:00.092.249: NSARecording.m:2471 NSARecording:writeTechNote RTF
+00:00:00.092.416: NSARecording.m:2471 NSARecording:writeTechNote RTF
+00:00:00.092.757: NSARecording.m:3152 NSARecording:writeAcquiringXML
+00:00:00.092.856: NSARecording.m:3152 NSARecording:writeAcquiringXML
+00:00:00.093.204: NSARecording.m:2124 NSARecording:writeInfo_EEG
+00:00:00.093.339: NSARecording.m:2124 NSARecording:writeInfo_EEG
+00:00:02.756.308: EAmpController.m:2290 EAmpController:currentSampleDate currentSampleDate 2024-02-08 18:40:14 +0000, _sampleCount 803580 - currentAmpTime 806356 = -2776
+00:00:02.756.561: PLTRecord.m:1800 PLTRecord:sampleData:sampleCount: 
+00:00:02.756.619: 
+00:00:02.756.701: Sample Provider timing info
+00:00:02.756.730:      Reference Date: 1 January 1970, GMT
+00:00:02.756.831:      Amp Start Time: 1707416810841007
+00:00:02.756.966:      Amp Start Date: 2024-02-08 10:26:50.841007 AM PST
+00:00:02.757.022: Current Sample Date: 2024-02-08 10:40:14.421007 AM PST
+00:00:02.757.094:      Stream Up Time: 803.580000 seconds
+00:00:02.757.173: 
+00:00:02.764.489: EAmpController.m:2290 EAmpController:currentSampleDate currentSampleDate 2024-02-08 18:40:14 +0000, _sampleCount 803580 - currentAmpTime 806367 = -2787
+00:00:02.769.191: NSARecording.m:739 NSARecording:writeSampleData:sampleCount: 
+00:00:02.769.316: NSARECORDING first sample received
+00:00:02.769.408:        stream uptime 803.580000
+00:00:02.769.496: recording _startDate 2024-02-08 10:40:14.421007 AM PST, epoch 1707417614, micro 1707417614421007
+00:00:02.769.577:   stream sample date 2024-02-08 10:40:14.421007 AM PST
+00:00:02.769.621:                 diff 0.000000
+00:00:02.769.662:   _end_ns (2387345983648) - _start_ns (2384593983648) = 2752000000, sampleCount 2752
+00:00:02.769.730: PTZController.m:3220 PTZController:startRecordingAtPath: setState: PTZController_streaming -> PTZController_resumeRecording 803.543486
+00:00:02.771.940: PTZAdvancedControls.m:1153 PTZAdvancedControls:enableControls: 
+00:00:02.772.437: PTZController.m:3038 PTZController:resetTimingInfo 
+00:00:02.772.659: --- VIDEO START RECORDING -------------------------------------------------------------------------------
+00:00:02.772.695: /Users/egi/Documents/Net Station User Data/Sessions/SIMONS-MIT/15992_baseline_20240212_114934.mff/15992_baseline_20240212_114934.mov
+00:00:02.772.722: maximumRecordedDuration 1800.000000
+00:00:02.772.746: maximumRecordedFileSize 0
+00:00:02.772.795: PTZController.m:870 PTZController:createMovieSyncWithFileName:sampleBeginTime: EEG (9223372036854.775391 9223372036854.775391) VID (-1.000000 -1.000000) (15992_baseline_20240212_114934.mov)
+00:00:02.772.884: ERtspSessionController.m:111 ERtspSessionController:startRecording 
+00:00:02.772.946: ERtspSession.m:202 ERtspSession:startRecording _waitForVIDtoPassEEGStart = TRUE, _waitForKeyframe_first = TRUE
+00:00:02.773.027: ERtspOutputContext.m:73 ERtspOutputContext:initWithPath:codec_VID:stream_VID:codec_AUD:stream_AUD: /Users/egi/Documents/Net Station User Data/Sessions/SIMONS-MIT/15992_baseline_20240212_114934.mff/15992_baseline_20240212_114934.mov
+00:00:02.773.353: ERtspOutputContext.m:73 ERtspOutputContext:initWithPath:codec_VID:stream_VID:codec_AUD:stream_AUD: /Users/egi/Documents/Net Station User Data/Sessions/SIMONS-MIT/Backups/15992_baseline_20240212_114934.mff/15992_baseline_20240212_114934.mov
+00:00:02.773.508: sync.sampleBeginTime 0
+00:00:02.773.547: SAMPLE BEGIN movie sync: EEG (0.000000 9223372036854.775391) VID (-1.000000 -1.000000) (15992_baseline_20240212_114934.mov)
+00:00:02.773.575: NSARecording.m:1974 NSARecording:writeInfo 
+00:00:02.773.722: ENOLISController.mm:993 ENOLISController:getAmpDetails: 
+00:00:02.777.288: NSARecording.m:812 NSARecording:writeSampleData:sampleCount: EEG shift: Remove 36 samples from epoch 1
+00:00:02.777.323: NSARecording.m:2003 NSARecording:writeInfo
+00:00:02.781.623: NSARecording.m:829 NSARecording:writeSampleData:sampleCount: _firstSampleWritten = YES
+00:00:02.790.220: ERtspSession.m:914 ERtspSession:stream 24096 pts 804.283081 _waitForVIDtoPassEEGStart = FALSE
+00:00:02.790.307: ERtspSession.m:975 ERtspSession:stream 24095 pts 804.283081 _waitForKeyframe_first
+00:00:02.794.251: EAmpController.m:2290 EAmpController:currentSampleDate currentSampleDate 2024-02-08 18:40:14 +0000, _sampleCount 803580 - currentAmpTime 806394 = -2814
+00:00:02.797.815: NSARecording.m:739 NSARecording:writeSampleData:sampleCount: 
+00:00:02.797.869: NSARECORDING first sample received
+00:00:02.797.901:        stream uptime 803.580000
+00:00:02.797.954: recording _startDate 2024-02-08 10:40:14.421007 AM PST, epoch 1707417614, micro 1707417614421007
+00:00:02.797.992:   stream sample date 2024-02-08 10:40:14.421007 AM PST
+00:00:02.798.017:                 diff 0.000000
+00:00:02.798.046:   _end_ns (2387345983648) - _start_ns (2384593983648) = 2752000000, sampleCount 2752
+00:00:02.798.084: PTZController.m:3219 PTZController:startRecordingAtPath: error [1] Already recording
+00:00:02.798.132: sync.sampleBeginTime 0
+00:00:02.798.166: SAMPLE BEGIN movie sync: EEG (0.000000 9223372036854.775391) VID (-1.000000 -1.000000) (15992_baseline_20240212_114934.mov)
+00:00:02.798.190: NSARecording.m:1974 NSARecording:writeInfo 
+00:00:02.798.255: ENOLISController.mm:993 ENOLISController:getAmpDetails: 
+00:00:02.801.971: NSARecording.m:812 NSARecording:writeSampleData:sampleCount: 00:00:02.801.984: NSARecording.m:2003 EEG shift: Remove 36 samples from epoch 1
+NSARecording:writeInfo
+00:00:02.806.088: NSARecording.m:829 NSARecording:writeSampleData:sampleCount: _firstSampleWritten = YES
+00:00:02.817.997: PLTRecord.m:1011 PLTRecord:firstSample: 
+00:00:02.819.335: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:02.819.609: PLTECIServer.mm:221 PLTECIServer:beginRecording_TRUE: videoState == PLTRecord_VID_busy
+00:00:02.819.714: PLTECIServer.mm:203 PLTECIServer:waitForVideoWithNotification: 00:00:02.819.743: PLTRecord.m:1011 PLTRecord:firstSample: 
+PTZController_resumeRecording
+00:00:02.819.976: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:02.820.149: PLTECIServer.mm:221 PLTECIServer:beginRecording_TRUE: videoState == PLTRecord_VID_busy
+00:00:02.820.257: PLTECIServer.mm:203 PLTECIServer:waitForVideoWithNotification: PTZController_resumeRecording
+00:00:02.821.536: ERtspSession.m:917 ERtspSession:stream 24097 pts 804.316467 _waitForKeyframe_first = FALSE, startTime_diff 1.632534
+00:00:02.821.610: ERtspSession.m:944 ERtspSession:stream 24097 pts 804.316467 _firstPTS_record VIDEO
+00:00:02.902.306: PLTptz.m:258 PLTptz:firstKeyFrame: 
+00:00:02.902.415: PLTptz.m:355 PLTptz:updateThumb _recordingImage
+00:00:02.902.632: PTZController.m:3268 PTZController:firstKeyFrame: setState: PTZController_resumeRecording -> PTZController_streaming 0.132856
+00:00:02.902.635: PLTECIServer.mm:203 PLTECIServer:waitForVideoWithNotification: PTZController_streaming
+00:00:02.902.713: --- VIDEO CAPTUREOUTPUT ---------------------------------------------------------------------------------
+00:00:02.902.635: PLTECIServer.mm:203 PLTECIServer:waitForVideoWithNotification: 00:00:02.902.753: PLTECIServer.mm:207 PLTECIServer:waitForVideoWithNotification: 00:00:02.902.803: Stream start date 2024-02-08 10:26:52.473541 AM PST, First frame 2024-02-08 10:40:16.790008 AM PST, Difference 804.316467
+PTZController_streaming
+Finished
+00:00:02.902.865: 2024-02-12 11:36:12.286625 AM PST - 2024-02-08 10:26:52.473541 AM PST = 349759.813084, _start_ns 2387429750791
+00:00:02.902.865: PLTECIServer.mm:207 PLTECIServer:waitForVideoWithNotification: Finished
+00:00:02.902.902: PTZController.m:1031 PTZController:frameReceived: 24097 pts 804.316467 - last 804.283081 = 0.033386 KEY FRAME
+00:00:02.908.580: PTZController.m:1045 PTZController:frameReceived: firstPTS_ 0.307544
+00:00:02.913.572: PTZController.m:1100 PTZController:addEventNamed:frameCount:pts:track:isKeyFrame: VBeg 24097 pts 804.624012
+00:00:02.914.170: NSAEvent2.m:309 NSAImageParent:initWithImage: VBeg
+00:00:02.914.942: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:02.915.190: [1] Event: 00:00:02.676, VBeg, User Markup, 00:13:26.255.999
+00:00:02.915.235: sync.sampleBeginTime 0
+00:00:02.915.268: VIDEO BEGIN movie sync: EEG (0.000000 9223372036854.775391) VID (2387.429751 -1.000000) (15992_baseline_20240212_114934.mov)
+00:00:02.915.541: PTZController.m:2111 PTZController:enableFocusControls Unsupported camera: AXIS M1065-L - B8A44F2EE8E2
+00:00:02.917.552: PTZAdvancedControls.m:1153 PTZAdvancedControls:enableControls: 
+00:00:02.939.893: PLTECIServer.mm:227 PLTECIServer:beginRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:00:02.940.016: PLTECICommandDelegate.mm:808 _state = 0
+00:00:02.940.096: PLTECIServer.mm:227 PLTECIServer:beginRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:00:02.940.154: PLTECICommandDelegate.mm:805 error [1] 00:00:02.940.092: PLTECICommandDelegate.mm:278 Callers cannot change _state when idle. Ignoring new state: 0
+'B' eci_BeginRecording ack
+00:00:02.941.320: PLTECICommandDelegate.mm:321 'A' eci_Attention ack
+00:00:02.941.627: PLTECIEvents.m:537 PLTECIEvents:attention: eci_Attention
+00:00:02.947.823: ENOLISController.mm:867 ENOLISController:getCurrentAmpTime:elapsedTime: ampTime 806550, elapsedTime 0.005358
+00:00:02.947.963: PLTECICommandDelegate.mm:334 'T' eci_ClockSynch ack
+00:00:02.948.071: PLTECICommandDelegate.mm:350 'T' eci_ClockSynch, ms 806541, upTimeAmp 806550, upTimeAmp_micro 806550000
+00:00:02.952.547: PLTECICommandDelegate.mm:366 upTimeAmp_micro 806550000 - upTimeECI_micro 19647000 = _clockDiff_micro 786897642, sc_to_ms 1.000000
+00:00:02.965.042: PLTECIEvents.m:551 PLTECIEvents:clockSync: eci_ClockSynch: upTimeAmp_micro 806550000 - upTimeECI_micro 19647000 = _clockDiff_micro = 786897642
+00:00:02.976.010: PLTECICommandDelegate.mm:516 'D' eci_EventData 2024-02-08T10:40:17.385649-08:00, baseTime 1707417597738649, ms_offset 19647, secondsFromGMT_ -28800
+00:00:02.976.157: PLTECICommandDelegate.mm:570 'D' eci_EventData ack
+00:00:02.977.386: PLTECIEvents.m:840 PLTECIEvents:eventData: 19647000 + 786897642 = 806544642: SESS 806,544
+00:00:02.978.133: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:02.978.544: [1] Event: 00:00:02.964, SESS, ECI TCP-IP 55513, 00:00:00.324.642
+00:00:02.991.629: NSAEvent2.m:309 NSAImageParent:initWithImage: Baseline_NS - Copy
+00:00:03.010.539: PLTECICommandDelegate.mm:516 'D' eci_EventData 2024-02-08T10:40:17.452649-08:00, baseTime 1707417597738649, ms_offset 19714, secondsFromGMT_ -28800
+00:00:03.010.656: PLTECICommandDelegate.mm:570 'D' eci_EventData ack
+00:00:03.013.720: PLTECIEvents.m:840 PLTECIEvents:eventData: 19714000 + 786897642 = 806611642: CELL 806,611
+00:00:03.014.402: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:03.015.477: [1] Event: 00:00:03.031, CELL, ECI TCP-IP 55513, 00:00:00.066.999
+00:00:03.052.451: NSAEvent2.m:309 NSAImageParent:initWithImage: EEG+ begins, EEG- ends
+00:00:04.110.699: PLTECICommandDelegate.mm:290 'E' eci_EndRecording
+00:00:04.111.287: PLTECIEvents.m:499 PLTECIEvents:endRecording: eci_EndRecording
+00:00:04.111.356: PLTRecord.m:289 PLTRecord:recordNotification: 
+00:00:04.111.394: PLTRecord.m:320 PLTRecord:record: PLTRecord_recording
+00:00:04.111.440: EEG PAUSE RECORDING
+00:00:04.111.472: EEG HANDLE PAUSE RECORDING
+00:00:04.111.846: NSAToolbarDelegate.m:803 NSAToolbarDelegate:updateInterface _onOff YES, _recordButton YES, _stopButton YES,
+00:00:04.111.927: NSAWaitForVideo.m:120 NSAWaitForVideo:waitForVideoCreateWithController:paused: 
+00:00:04.112.102: NSAWaitForVideo.m:81 NSAWaitForVideo:initWithController:paused: 
+00:00:04.112.152:     recording_.end_ns 2388712992764 - videoController_.last_ns 2388697930347 = 0.015062 (seconds)
+00:00:04.112.253: NSARecording.m:1444 NSARecording:appendFlatlinedSamples EEG shift: Append 36 flatlined samples to epoch 1
+00:00:04.112.618: NSARecording.m:3037 NSARecording:writeEpoch #1, beginTime: 0, endTime: 4122000, firstBlock: 1, lastBlock: 2
+00:00:04.113.031: NSARecording.m:1444 NSARecording:appendFlatlinedSamples EEG shift: Append 36 flatlined samples to epoch 1
+00:00:04.113.353: NSARecording.m:3037 NSARecording:writeEpoch #1, beginTime: 0, endTime: 4122000, firstBlock: 1, lastBlock: 2
+00:00:04.118.837: PLTECIServer.mm:258 PLTECIServer:endRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:00:04.118.898: PLTECICommandDelegate.mm:808 _state = 0
+00:00:04.118.937: PLTECICommandDelegate.mm:306 'E' eci_EndRecording ack
+00:00:04.570.625: PLTECICommandDelegate.mm:262 'B' eci_BeginRecording, ms 807702, upTime 808178
+00:00:06.711.439: PLTECIEvents.m:482 PLTECIEvents:beginRecording: eci_BeginRecording: _clockDiff_micro 786897642
+00:00:06.711.525: PLTRecord.m:289 PLTRecord:recordNotification: 
+00:00:06.711.559: PLTRecord.m:320 PLTRecord:record: PLTRecord_paused
+00:00:06.711.600: EEG RESUME RECORDING
+00:00:06.711.727: PLTRecord.m:1394 PLTRecord:resumeRecording spSampleCount 807702 - _spSampleCount_last 807702 = 0, _spSampleCount_pause 0
+00:00:06.712.153: NSAToolbarDelegate.m:803 NSAToolbarDelegate:updateInterface _onOff YES, _recordButton YES, _stopButton YES,
+00:00:06.712.209: NSAWaitForVideo.m:175 NSAWaitForVideo:recordingResumed: 
+00:00:06.712.250: NSAWaitForVideo.m:50 NSAWaitForVideo:dealloc 
+00:00:06.712.433: No_Kill_I.m:45 NSAWaitForVideo:dealloc sCount 1, class NSAWaitForVideo
+00:00:06.712.497: PTZController.m:3133 PTZController:resumeRecording error [1] Already recording
+00:00:06.721.330: NSARecording.m:812 NSARecording:writeSampleData:sampleCount: EEG shift: Remove 36 samples from epoch 2
+00:00:06.726.172: NSARecording.m:829 NSARecording:writeSampleData:sampleCount: _firstSampleWritten = YES
+00:00:06.727.089: NSARecording.m:812 NSARecording:writeSampleData:sampleCount: EEG shift: Remove 36 samples from epoch 2
+00:00:06.731.250: NSARecording.m:829 NSARecording:writeSampleData:sampleCount: _firstSampleWritten = YES
+00:00:06.742.524: PLTRecord.m:1011 PLTRecord:firstSample: 
+00:00:06.746.458: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:06.747.131: PLTECIServer.mm:227 PLTECIServer:beginRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:00:06.747.181: PLTECICommandDelegate.mm:808 _state = 0
+00:00:06.747.221: PLTECICommandDelegate.mm:278 00:00:06.747.242: PLTRecord.m:1011 PLTRecord:firstSample: 'B' eci_BeginRecording ack
+
+00:00:06.748.276: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:06.748.456: PLTECIServer.mm:227 PLTECIServer:beginRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:00:06.748.503: PLTECICommandDelegate.mm:805 error [1] Callers cannot change _state when idle. Ignoring new state: 0
+00:00:07.253.948: PLTECICommandDelegate.mm:516 'D' eci_EventData 2024-02-08T10:40:21.210649-08:00, baseTime 1707417597738649, ms_offset 23472, secondsFromGMT_ -28800
+00:00:07.254.122: PLTECICommandDelegate.mm:570 'D' eci_EventData ack
+00:00:09.391.268: PLTECIEvents.m:840 PLTECIEvents:eventData: 23472000 + 786897642 = 810369642: EEG+ 810,369
+00:00:09.391.828: EventListWindow.m:758 EventListWindow:reloadData 
+00:00:09.392.954: [2] Event: 00:00:06.789, EEG+, ECI TCP-IP 55513, 00:00:03.758.000
+00:00:09.420.068: NSAEvent2.m:309 NSAImageParent:initWithImage: EEG+
+00:03:12.977.668: PLTECICommandDelegate.mm:516 'D' eci_EventData 2024-02-08T10:43:26.939649-08:00, baseTime 1707417597738649, ms_offset 209201, secondsFromGMT_ -28800
+00:03:12.977.814: PLTECICommandDelegate.mm:570 'D' eci_EventData ack
+00:03:12.979.338: PLTECIEvents.m:840 PLTECIEvents:eventData: 209201000 + 786897642 = 996098642: EEG- 996,098
+00:03:12.979.883: NSAEvent2.m:309 NSAImageParent:initWithImage: EEG-
+00:03:12.980.755: EventListWindow.m:758 EventListWindow:reloadData 
+00:03:12.981.903: [2] Event: 00:03:12.518, EEG-, ECI TCP-IP 55513, 00:03:05.728.999
+00:03:13.577.801: PLTECICommandDelegate.mm:290 'E' eci_EndRecording
+00:03:13.579.492: PLTECIEvents.m:499 PLTECIEvents:endRecording: eci_EndRecording
+00:03:13.579.584: PLTRecord.m:289 PLTRecord:recordNotification: 
+00:03:13.579.679: PLTRecord.m:320 PLTRecord:record: PLTRecord_recording
+00:03:13.579.743: EEG PAUSE RECORDING
+00:03:13.579.818: EEG HANDLE PAUSE RECORDING
+00:03:13.580.176: NSAToolbarDelegate.m:803 NSAToolbarDelegate:updateInterface _onOff YES, _recordButton YES, _stopButton YES,
+00:03:13.580.229: NSAWaitForVideo.m:120 NSAWaitForVideo:waitForVideoCreateWithController:paused: 
+00:03:13.580.386: NSAWaitForVideo.m:81 NSAWaitForVideo:initWithController:paused: 
+00:03:13.580.429:     recording_.end_ns 2578179992819 - videoController_.last_ns 2578176046203 = 0.003947 (seconds)
+00:03:13.580.518: NSARecording.m:1444 NSARecording:appendFlatlinedSamples EEG shift: Append 36 flatlined samples to epoch 2
+00:03:13.580.610: NSARecording.m:3037 NSARecording:writeEpoch #2, beginTime: 4122000, endTime: 193595000, firstBlock: 3, lastBlock: 50
+00:03:13.581.517: NSARecording.m:1444 NSARecording:appendFlatlinedSamples EEG shift: Append 36 flatlined samples to epoch 2
+00:03:13.581.607: NSARecording.m:3037 NSARecording:writeEpoch #2, beginTime: 4122000, endTime: 193595000, firstBlock: 3, lastBlock: 50
+00:03:13.587.748: PLTECIServer.mm:258 PLTECIServer:endRecording_TRUE: number.intValue 55513, _portNumber 55513
+00:03:13.587.849: PLTECICommandDelegate.mm:808 _state = 0
+00:03:13.587.927: PLTECICommandDelegate.mm:306 'E' eci_EndRecording ack
+00:03:14.039.524: PLTECICommandDelegate.mm:239 'X' eci_Exit
+00:03:14.039.613: PLTECICommandDelegate.mm:243 'X' eci_Exit ack
+00:03:15.577.477: PLTECICommandDelegate.mm:829 eci connection error: READ_FAILURE
+00:03:16.486.322: PLTECIEvents.m:414 PLTECIEvents:exit: eci_Exit
+00:03:16.486.409: PLTRecord.m:711 PLTRecord:stopAll 
+00:03:16.486.450: --- EEG STOP RECORDING ----------------------------------------------------------------------------------
+00:03:16.486.820: --- EEG HANDLE STOP RECORDING ---------------------------------------------------------------------------
+00:03:16.492.135: PLTRecord.m:1449 PLTRecord:handleStopRecording Recording duration 193.595000, record duration 193.595000
+00:03:16.500.156: 
+00:03:16.500.248: Sample Provider timing info
+00:03:16.500.294:     Amp Start Time: 140734419014396
+00:03:16.500.370:     Amp Start Date: 2024-02-08 10:26:50.841007 AM PST
+00:03:16.500.413:     Stream Up Time: 997.175000 seconds
+00:03:16.500.446: 
+00:03:16.500.668: NSARecording.m:161 NSARecording:lastWrites top signal blocks 0
+00:03:16.501.149: NSARecording.m:2760 NSARecording:writeWorkspace 
+00:03:16.501.225: NSARecording.m:1090 offset 1052, egiType 
+00:03:16.505.948: NSPopUpButton+Extras.m:91 NSPopUpButton:indexOfSelectedItemInRange: No selection in range {8, 1}
+00:03:16.506.503: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: splitView_
+00:03:16.507.103: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: psgView_
+00:03:16.507.147: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: channel settings
+00:03:16.507.253: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: positions
+00:03:16.507.366: NSDictionary+Extras.m:130 __NSDictionaryM:safeSetObject:forKey: aKey cannot be nil
+00:03:16.507.435: NSDictionary+Extras.m:137 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key
+00:03:16.507.549: NSADelegate.mm:856 NSADelegate:developmentFeaturesEnabled 1
+00:03:16.512.041: NSARecording.m:2805 NSARecording:writeWorkspace
+00:03:16.512.092: NSARecording.m:3187 NSARecording:removeAcquiringXML 
+00:03:16.512.337: NSARecording.m:161 NSARecording:lastWrites top signal blocks cache 1
+00:03:16.512.856: NSARecording.m:2760 NSARecording:writeWorkspace 
+00:03:16.512.985: NSARecording.m:1090 offset 1052, egiType 
+00:03:16.514.225: NSARecording.m:3197 NSARecording:removeAcquiringXML
+00:03:16.517.385: NSPopUpButton+Extras.m:91 NSPopUpButton:indexOfSelectedItemInRange: No selection in range {8, 1}
+00:03:16.517.904: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: splitView_
+00:03:16.518.443: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: psgView_
+00:03:16.518.487: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: channel settings
+00:03:16.518.579: NSDictionary+Extras.m:135 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key: positions
+00:03:16.518.671: NSDictionary+Extras.m:130 __NSDictionaryM:safeSetObject:forKey: aKey cannot be nil
+00:03:16.518.710: NSDictionary+Extras.m:137 __NSDictionaryM:safeSetObject:forKey: object cannot be nil for key
+00:03:16.518.780: NSADelegate.mm:856 NSADelegate:developmentFeaturesEnabled 1
+00:03:16.523.436: NSARecording.m:2805 NSARecording:writeWorkspace
+00:03:16.523.515: NSARecording.m:3187 NSARecording:removeAcquiringXML 
+00:03:16.525.859: NSARecording.m:3197 NSARecording:removeAcquiringXML
+00:03:20.166.001: PLTRecord.m:1578 PLTRecord:lastWritesComplete: _recording
+00:03:20.166.256: NSAWaitForVideo.m:182 NSAWaitForVideo:recordingDealloc: 
+00:03:20.166.317: --- NSARECORDING dealloc --------------------------------------------------------------------------------
