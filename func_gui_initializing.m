@@ -29,6 +29,12 @@ else
     app.txt_marker_type.Items = default.txt_marker_type;
 end
 
+if isempty(default.txt_script_remove_events)
+    app.txt_script_remove_events.Value = '';
+else
+    app.txt_script_remove_events.Value = default.txt_script_remove_events;
+end
+
 func_update_file_list(app,0);%update file list
 
 addpath(genpath(default.txt_path_to_eeglab),'-END');

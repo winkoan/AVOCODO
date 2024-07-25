@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eventTrack xmlns="http://www.egi.com/event_mff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <name>User Markup</name>
+   <trackType>EVNT</trackType>
+   <event>
+      <beginTime>2024-07-16T15:23:21.333660-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>VBeg</code>
+      <label/>
+      <description>Key</description>
+      <sourceDevice/>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:23:23.202660-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>VBeg</code>
+      <label/>
+      <description>Key</description>
+      <sourceDevice/>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:23:23.366660-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>VEnd</code>
+      <label/>
+      <description/>
+      <sourceDevice/>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+</eventTrack>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<epochs xmlns="http://www.egi.com/epochs_mff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <epoch>
+      <beginTime>0</beginTime>
+      <endTime>1667000</endTime>
+      <firstBlock>1</firstBlock>
+      <lastBlock>1</lastBlock>
+   </epoch>
+   <epoch>
+      <beginTime>2098000</beginTime>
+      <endTime>188156000</endTime>
+      <firstBlock>2</firstBlock>
+      <lastBlock>4</lastBlock>
+   </epoch>
+</epochs>

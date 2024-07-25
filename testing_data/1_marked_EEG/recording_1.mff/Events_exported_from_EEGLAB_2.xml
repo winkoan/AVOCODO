@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<eventTrack xmlns="http://www.egi.com/event_mff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <name>User Markup</name>
+   <trackType>STIM</trackType>
+   <event>
+      <beginTime>2024-07-16T15:23:21.517190-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>SESS</code>
+      <label>Baseline_NS - Copy</label>
+      <description/>
+      <sourceDevice>Multi-Port ECI</sourceDevice>
+      <segmentationEvent>false</segmentationEvent>
+      <keys>
+         <key>
+            <keyCode>age_</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>exp_</keyCode>
+            <description/>
+            <data dataType="short">1</data>
+         </key>
+         <key>
+            <keyCode>hand</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>sex_</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>subj</keyCode>
+            <description/>
+            <data dataType="short">11111</data>
+         </key>
+         <key>
+            <keyCode>#cel</keyCode>
+            <description/>
+            <data dataType="short">1</data>
+         </key>
+      </keys>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:23:21.566190-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>CELL</code>
+      <label>EEG+ begins, EEG- ends</label>
+      <description/>
+      <sourceDevice>Multi-Port ECI</sourceDevice>
+      <segmentationEvent>false</segmentationEvent>
+      <keys>
+         <key>
+            <keyCode>cel#</keyCode>
+            <description/>
+            <data dataType="short">1</data>
+         </key>
+         <key>
+            <keyCode>#obs</keyCode>
+            <description/>
+            <data dataType="short">999</data>
+         </key>
+         <key>
+            <keyCode>#spc</keyCode>
+            <description/>
+            <data dataType="short">12</data>
+         </key>
+      </keys>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:23:23.434190-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>EEG+</code>
+      <label/>
+      <description/>
+      <sourceDevice>Multi-Port ECI</sourceDevice>
+      <segmentationEvent>false</segmentationEvent>
+      <keys>
+         <key>
+            <keyCode>cel#</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>obs#</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>pos#</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>argu</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+      </keys>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:26:28.073190-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1000</duration>
+      <code>EEG-</code>
+      <label/>
+      <description/>
+      <sourceDevice>Multi-Port ECI</sourceDevice>
+      <segmentationEvent>false</segmentationEvent>
+      <keys>
+         <key>
+            <keyCode>cel#</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>obs#</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+         <key>
+            <keyCode>pos#</keyCode>
+            <description/>
+            <data dataType="short">1</data>
+         </key>
+         <key>
+            <keyCode>argu</keyCode>
+            <description/>
+            <data dataType="short">0</data>
+         </key>
+      </keys>
+   </event>
+</eventTrack>

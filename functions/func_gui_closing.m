@@ -10,6 +10,7 @@ end
 default.txt_path_to_data = app.txt_path_data.Value;
 default.txt_path_to_eeglab = app.txt_path_eeglab.Value;
 default.txt_marker_type = app.txt_marker_type.Items;
+default.txt_script_remove_events = app.txt_script_remove_events.Value;
 
 save(fullfile('config','default.mat'),'default');
 

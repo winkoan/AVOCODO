@@ -1,14 +1,18 @@
-function func_export(app,flag_additional_scrip)
-answer = questdlg('Are you ready to export?','Choice','Yes','No','');
-if strcmp(answer,'Yes')
-    % Get EEG
-    EEG = getappdata(app.hand_editing,'EEG');
-    video_start_latencies = getappdata(app.hand_editing,'video_start_latencies');
+function func_export(app,flag_additional_script)
+% Export EEG
 
-    % Get table of markers for redo
+% Prompt to confirm
+answer = questdlg('Are you ready to export?','Choice','Yes','No','');
+
+if strcmp(answer,'Yes')
+    % Get EEG to export
+    EEG = getappdata(app.hand_editing,'EEG');
+
+    % Get table of markers
     tab = get(app.table_markers,'Data');
     
     % Get all event types (can be much faster if using extractfields)
+    % But the current code doesn't rely on any specific toolbox
     types = {};
     for idx = 1:length(EEG.event)
         types{idx,1} = EEG.event(idx).type;
@@ -20,19 +24,19 @@ if strcmp(answer,'Yes')
             EEG.event(end+1).type = tab{idx,1};
             EEG.event(end).latency = tab{idx,2}*1000;%in ms (eeg latency)
 
-            % Add time stamp
+            % Add time stamp, so can be saved in .mff format without any issue
             idx_video = tab{idx,4};
             ts_video_begin = datetime(EEG.event(video_events(idx_video)).begintime(1:end-6));
             ts_video_begin.Format = 'yyyy-MM-dd''T''hh:mm:ss.SSSSSS';
             video_latency = tab{idx,3}*1000;%video latency in ms
             ts_added_event = ts_video_begin+milliseconds(video_latency);
             str_added_event = strcat(string(ts_added_event),EEG.event(video_events(idx_video)).begintime(end-5:end));
-            EEG.event(end).begintime = str_added_event;
+            EEG.event(end).begintime = str_added_event;%the exact format as used in .mff files
 
-            % Add others
+            % Add others (again for .mff export)
             EEG.event(end).name = 'video_coding';
-            EEG.event(end).tracktype = 'VDCD';%4 char for video coding
-            EEG.event(end).classid = 'EVNT';%
+            EEG.event(end).tracktype = 'VDCD';%4 char for video coding (can be anything)
+            EEG.event(end).classid = 'EVNT';%(can be anything)
             EEG.event(end).code = tab{idx,1};%
             EEG.event(end).duration = 1;%
             EEG.event(end).relativebegintime = 0;%
@@ -41,10 +45,9 @@ if strcmp(answer,'Yes')
         EEG = pop_editeventvals(EEG,'sort',{'latency',0});%sort events by their latency
     end
     
-    if flag_additional_scrip
+    if flag_additional_script
         %some additional scripts to filter tags
-        out_path = fullfile(app.txt_path_data.Value,'2_edited_EEG');%tags are filtered based on marker
-        if ~exist(out_path);mkdir(out_path);end
+        eval(app.txt_script_remove_events.Value(1:end-2));%run this script if choose to run additional script
     end
 
     % Save markers
@@ -66,7 +69,7 @@ if strcmp(answer,'Yes')
     if ~exist(out_path);mkdir(out_path);end
     out_file = app.list_eeg_files.Value;
     pop_mffexport( EEG, fullfile(out_path,out_file)); % export file to .mff format (this doesn't save added markers; seems difficult to fix)
-    %pop_saveset(EEG,'filename',out_file,'filepath',out_path,'savemode','onefile','version','7.3');
+    %pop_saveset(EEG,'filename',out_file,'filepath',out_path,'savemode','onefile','version','7.3');%optionally, save to .set file
     fprintf('\n\nEEG saved!\n')
     
     % Make two beep sounds for completion

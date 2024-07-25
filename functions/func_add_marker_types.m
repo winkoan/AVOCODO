@@ -11,7 +11,8 @@ else
     definput = {''};
 end
 
-answer = inputdlg(prompt,dlgtitle,fieldsize,definput);
+answer = inputdlg(prompt,dlgtitle,fieldsize,definput);%prompt to ask input
+answer = strrep(answer,' ','');%remove space
 
 types = split(answer{1},',');
 
