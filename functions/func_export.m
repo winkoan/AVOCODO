@@ -67,8 +67,8 @@ if strcmp(answer,'Yes')
     fprintf('\n\nSaving EEG... (this may take some time)\n')
     out_path = fullfile(app.txt_path_data.Value,'1_marked_EEG');%markers are dropped in EEG
     if ~exist(out_path);mkdir(out_path);end
-    out_file = app.list_eeg_files.Value;
-    pop_mffexport( EEG, fullfile(out_path,out_file)); % export file to .mff format (this doesn't save added markers; seems difficult to fix)
+    out_file = [app.list_eeg_files.Value(1:end-4),'_marked.mff'];%add marked to file name
+    pop_mffexport( EEG, fullfile(out_path,out_file)); % export file to .mff format
     %pop_saveset(EEG,'filename',out_file,'filepath',out_path,'savemode','onefile','version','7.3');%optionally, save to .set file
     fprintf('\n\nEEG saved!\n')
     
