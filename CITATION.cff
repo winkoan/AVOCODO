@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: An
+    given-names: Winko W.
+    orcid: https://orcid.org/0000-0002-0621-1680
+title: "AVOCODO: a tool for Audio/Video Coding Optimization with EEG signals"
+version: v0.1.1
+date-released: 2024-07-20
