@@ -47,7 +47,7 @@ if strcmp(answer,'Yes')
     
     if flag_additional_script
         %some additional scripts to filter tags
-        eval(app.txt_script_remove_events.Value(1:end-2));%run this script if choose to run additional script
+        run(app.txt_script_remove_events.Value(1:end-2));%run this script if choose to run additional script
     end
 
     % Save markers
