@@ -23,10 +23,10 @@ if ~isempty(type)
     end
     
     if isempty(find(eeg_latency_exist==new_entry{1,2}))
-        set(tab,'Data',[tab_exist; new_entry]);%update table
+        set(tab,'Data',sortrows([tab_exist; new_entry],2));%update table
         
         % Save another copy of table for "redo"
-        setappdata(app.hand_editing,'table_markers',get(tab,'Data'));
+        setappdata(app.hand_editing,'table_redo',{});
     
         func_add_marker_to_spectrogram(app);%plot markers in spectrogram
     else

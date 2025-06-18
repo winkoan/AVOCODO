@@ -17,11 +17,22 @@ type = {};
 lat = [];
 for idx = 1:length(EEG.event)
     type{end+1,1} = EEG.event(idx).type;
-    lat(end+1,1) = EEG.event(idx).latency/1000;%latency in seconds
+    lat(end+1,1) = EEG.event(idx).latency/1000; % Latency in seconds
 end
-idx_videos = find(contains(type,'VBeg'));%find indices of all videos
-offset = lat(idx_videos(idx_video));%
-lat = lat - offset;%offset latencies by the beginning of video
+
+% Find indices for video start points VBeg and sync and boundary
+idx_video_start = find(contains(type, {'VBeg'})); % First video begins with 'VBeg'
+idx_video_boundary = find(contains(type, 'boundary')); % Second video starts at 'boundary'
+
+idx_video_all = [idx_video_start(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
+
+% Check if 'VBeg' event exists
+if isempty(idx_video_start)
+    error('No start events found in EEG event data.');
+end
+
+offset = lat(idx_video_all(idx_video));
+lat = lat - offset; % Apply the offset to all latencies
 
 % Stem plot 
 h_stem_eeg = stem(app.axis_spectrogram,lat,ones(1,length(lat))*ylim(2),...

@@ -36,23 +36,11 @@ if strcmp(answer,'Yes')
     % Load data
     EEG = pop_mffimport(fullfile(file_path,file_name) ,[], 0, 0) ;
 
-    % Get all event types (can be much faster if using extractfields)
-    types = {};
-    for idx = 1:length(EEG.event)
-        types{idx,1} = EEG.event(idx).type;
-    end
-    video_events = find(contains(types,'VBeg'));%find beginning of each video
-    video_start_latencies = [];
-    for idx = 1:length(video_events)
-        video_start_latencies(idx,1) = EEG.event(video_events(idx)).latency;%(ms)
-    end
-
     % Update lamp state
     app.lamp_load_eeg.Color = 'g';
 
     % save the data for global use
     setappdata(app.hand_editing,'EEG',EEG);
-    setappdata(app.hand_editing,'video_start_latencies',video_start_latencies);
 
     fprintf(['\n\n',file_name,' loaded!']);
 end

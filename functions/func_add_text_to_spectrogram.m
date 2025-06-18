@@ -5,3 +5,4 @@ y_level = ylim(1) + (ylim(2) - ylim(1))*y_value;
 
 % add text to spectrogram
 h_text = text(app.axis_spectrogram,lat2add,y_level*ones(1,length(lat2add)),txt2add,'color',color);
+set(h_text,'Rotation',45);
