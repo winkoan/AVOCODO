@@ -8,8 +8,8 @@ clc
 %addpath(genpath('config'),'-END');
 
 % Load default field values
-load(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
-%load(fullfile(pwd,'config','default.mat'),'default');
+%load(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
+load(fullfile(pwd,'config','default.mat'),'default');
 
 % Set default values
 if isempty(default.txt_path_to_data)
