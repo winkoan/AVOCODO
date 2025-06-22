@@ -3,12 +3,13 @@ function func_gui_initializing(app)
 warning off
 clc
 % Add necessary folders to path
-addpath(genpath('packages'),'-END');
-addpath(genpath('functions'));
-addpath(genpath('config'),'-END');
+%addpath(genpath('packages'),'-END');
+%addpath(genpath('functions'));
+%addpath(genpath('config'),'-END');
 
 % Load default field values
-load(fullfile(pwd,'config','default.mat'),'default');
+load(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
+%load(fullfile(pwd,'config','default.mat'),'default');
 
 % Set default values
 if isempty(default.txt_path_to_data)
@@ -37,4 +38,4 @@ end
 
 func_update_file_list(app,0);%update file list
 
-addpath(genpath(default.txt_path_to_eeglab),'-END');
+%addpath(genpath(default.txt_path_to_eeglab),'-END');

@@ -25,6 +25,11 @@ idx_video_start = find(contains(type, {'VBeg'})); % First video begins with 'VBe
 idx_video_boundary = find(contains(type, 'boundary')); % Second video starts at 'boundary'
 
 idx_video_all = [idx_video_start(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
+video_start_latencies = [];
+for idx_v = 1:length(idx_video_all)
+    video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*1000;%save latency in seconds
+end
+setappdata(app.hand_editing,'video_start_latencies',video_start_latencies);%update video start latency
 
 % Check if 'VBeg' event exists
 if isempty(idx_video_start)
