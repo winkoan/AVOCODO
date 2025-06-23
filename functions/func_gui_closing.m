@@ -12,7 +12,10 @@ default.txt_path_to_eeglab = app.txt_path_eeglab.Value;
 default.txt_marker_type = app.txt_marker_type.Items;
 default.txt_script_remove_events = app.txt_script_remove_events.Value;
 
-%save(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
-save(fullfile(pwd,'config','default.mat'),'default');
+if isdeployed
+    save(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
+else
+    save(fullfile(pwd,'config','default.mat'),'default');
+end
 
 delete(app)
