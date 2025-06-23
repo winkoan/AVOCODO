@@ -31,3 +31,4 @@ Notes:
 1) AVOCODO now includes EEGLAB and therefore no longer requires EEGLAB to run.
 2) There is a standalone, pre-compiled application in "standalone". You can download and install it to your macbook. After doing so, even if you don't have MATLAB, you will be able to run AVOCODO! For successful closing of the GUI, you should change the right for the following file to "Read and Write"
 run_AVOCODO.app/Contents/Resources/run_AVOCODO_mcr/run_AVOCODO/config.mat
+3) Now after loading EEG, a pop-up window will show up and list all EEG markers. This is for sanity check only. Feel free to close.
