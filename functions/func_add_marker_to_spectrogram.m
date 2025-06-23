@@ -24,7 +24,7 @@ if ~isempty(tab.Data)
             'Marker','none','linewidth',1.5,'color','r');
         setappdata(app.hand_editing,'h_stem',h_stem);%update handle
         
-        h_marker_txt = func_add_text_to_spectrogram(app,0.6,tab.Data(:,1),lat_in_video,'r');
+        h_marker_txt = func_add_text_to_spectrogram(app,0.6,tab.Data(idx_this_video,1),lat_in_video,'r');
         h_marker_lat = func_add_text_to_spectrogram(app,0.5,arrayfun(@(x) num2str(x,'%.2f'), lat_in_video, 'UniformOutput', 0),...
             lat_in_video,'r');
         setappdata(app.hand_editing,'h_marker_txt',h_marker_txt);%update handle
