@@ -11,6 +11,14 @@
       <keys/>
    </event>
    <event>
+      <beginTime>2024-07-16T15:23:32.809180-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1</duration>
+      <code>talking+</code>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
       <beginTime>2024-07-16T15:23:37.761060-04:00</beginTime>
       <relativeBeginTime>0</relativeBeginTime>
       <duration>1</duration>
@@ -39,6 +47,22 @@
       <relativeBeginTime>0</relativeBeginTime>
       <duration>1</duration>
       <code>stim-</code>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:24:08.966170-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1</duration>
+      <code>talking+</code>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:24:10.966170-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1</duration>
+      <code>talking+</code>
       <segmentationEvent>false</segmentationEvent>
       <keys/>
    </event>

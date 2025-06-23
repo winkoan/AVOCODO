@@ -26,3 +26,8 @@ Notes:
 1) EEG has to be in .mff format (EGI)
 2) Video has to be in .mov format and is in the .mff file
 3) AVOCODO will automatically create subfolders "0_markers" and "1_marked_EEG" inside the source folder.
+
+=======Updated by Winko W. An on 6/23/2025=========
+1) AVOCODO now includes EEGLAB and therefore no longer requires EEGLAB to run.
+2) There is a standalone, pre-compiled application in "standalone". You can download and install it to your macbook. After doing so, even if you don't have MATLAB, you will be able to run AVOCODO! For successful closing of the GUI, you should change the right for the following file to "Read and Write"
+run_AVOCODO.app/Contents/Resources/run_AVOCODO_mcr/run_AVOCODO/config.mat
