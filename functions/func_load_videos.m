@@ -9,6 +9,12 @@ path = app.txt_path_data.Value;%use path to eeg for path to video
 file = app.list_eeg_files.Value;%file name
 videos_path = dir(fullfile(path,file,'*.mov'));%find all videos
 
+% Give an error if no video if found
+if isempty(videos_path)
+    errordlg('No video is found in the mff file!', 'Error');
+    return;
+end
+
 videos = {};
 audios = {};
 idx_video = {};

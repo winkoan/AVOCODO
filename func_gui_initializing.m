@@ -22,12 +22,6 @@ else
     app.txt_path_data.Value = default.txt_path_to_data;
 end
 
-if isempty(default.txt_path_to_eeglab)
-    app.txt_path_eeglab.Value = pwd;
-else
-    app.txt_path_eeglab.Value = default.txt_path_to_eeglab;
-end
-
 if isempty(default.txt_marker_type)
     app.txt_marker_type.Items = {};
 else
@@ -42,6 +36,6 @@ end
 
 func_update_file_list(app,0);%update file list
 
-if ~isdeployed
-    addpath(genpath(default.txt_path_to_eeglab),'-END');
-end
+%if ~isdeployed
+%    addpath(genpath(default.txt_path_to_eeglab),'-END');
+%end

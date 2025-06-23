@@ -3,11 +3,17 @@ function func_load_eeg(app)
 answer = questdlg('Are you ready to load EEG? Unsaved markers (if any) will be deleted.','Choice','Yes','No','');
 if strcmp(answer,'Yes')
     vlc = getappdata(app.hand_editing,'vlc');%close vlc window if exists
+    fui = getappdata(app.hand_editing,'fui');
+
     if ~isempty(vlc)%if vlc exists, quit
         try
             vlc.quit();
         catch
         end
+    end
+
+    if ~isempty(fui) && isvalid(fui)
+        delete(fui.Parent);
     end
     
     % Reset table markers data
@@ -36,11 +42,34 @@ if strcmp(answer,'Yes')
     % Load data
     EEG = pop_mffimport(fullfile(file_path,file_name) ,[], 0, 0) ;
 
+    % Use a pop-up window to display all EEG events and latencies
+    tab_pop = table(extractfield(EEG.event,'type')',extractfield(EEG.event,'begintime')',...
+        (extractfield(EEG.event,'latency')/1000)','VariableNames',{'Type','BeginTime','Latency (second)'});
+
+    % Define row and column dimensions
+    nRows = size(tab_pop, 1);
+    nCols = size(tab_pop, 2);
+
+    % Estimate pixel size per cell
+    rowHeight = 22;
+    colWidth = 100;
+    
+    % Calculate total size needed
+    tableWidth = colWidth * nCols;
+    tableHeight = rowHeight * (nRows + 1); % +1 for header
+    
+    % Create the figure window to match the table size
+    f = uifigure('Name', 'EEG markers - for sanity check only', 'Position', [100 100 tableWidth+150 tableHeight+40]);
+    
+    % Create the table and fill the window
+    fui = uitable(f, 'Data', tab_pop, 'Position', [20 20 tableWidth+100 tableHeight]);
+
     % Update lamp state
     app.lamp_load_eeg.Color = 'g';
 
     % save the data for global use
     setappdata(app.hand_editing,'EEG',EEG);
+    setappdata(app.hand_editing,'fui',fui);
 
     fprintf(['\n\n',file_name,' loaded!']);
 end
