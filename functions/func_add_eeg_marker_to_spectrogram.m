@@ -21,20 +21,30 @@ for idx = 1:length(EEG.event)
 end
 
 % Find indices for video start points VBeg and sync and boundary
-idx_video_start = find(contains(type, {'VBeg'})); % First video begins with 'VBeg'
+idx_video_vbeg = find(contains(type, {'VBeg'})); % First video begins with 'VBeg'
 idx_video_boundary = find(contains(type, 'boundary')); % Second video starts at 'boundary'
+idx_video_sync = find(contains(type, {'sync'})); % First video begins with 'sync'
 
-idx_video_all = [idx_video_start(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
+if ~isempty(idx_video_vbeg)
+    idx_video_all = [idx_video_vbeg(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
+elseif ~isempty(idx_video_sync)
+        idx_video_all = idx_video_sync;
+        % Correct latency if sync is used
+        % Note: this is based on experimental data and that the sync event has a 1000ms duration
+        % Correcting for this 1000ms seems to work better on our data
+        % However, this may not apply to all data
+        for idx_v = 1:length(idx_video_all)
+            lat(idx_video_all(idx_v)) = lat(idx_video_all(idx_v)) + 1;%save latency in seconds
+        end
+else
+    errordlg('No valid sync markers found!', 'Error');
+end
+
 video_start_latencies = [];
 for idx_v = 1:length(idx_video_all)
-    video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*1000;%save latency in seconds
+    video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*1000;%save latency in ms
 end
 setappdata(app.hand_editing,'video_start_latencies',video_start_latencies);%update video start latency
-
-% Check if 'VBeg' event exists
-if isempty(idx_video_start)
-    error('No start events found in EEG event data.');
-end
 
 offset = lat(idx_video_all(idx_video));
 lat = lat - offset; % Apply the offset to all latencies

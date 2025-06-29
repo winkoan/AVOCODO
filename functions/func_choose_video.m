@@ -31,7 +31,7 @@ close all%close figure if created (maybe need to figure out why it was created..
 % Add a dashed line
 hold(app.axis_spectrogram,'on');
 ylim = get(app.axis_spectrogram,'ylim');
-h_line = plot(app.axis_spectrogram,[0,0],ylim,'k--','linewidth',1);
+h_line = plot(app.axis_spectrogram,[0,0],ylim,'m--','linewidth',1.5);
 setappdata(app.hand_editing,'h_line',h_line);
 
 % Choose video path
