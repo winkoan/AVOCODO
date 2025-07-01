@@ -46,8 +46,13 @@ if strcmp(answer,'Yes')
     end
     
     if flag_additional_script
-        %some additional scripts to filter tags
+        try
+            %some additional scripts to filter tags
         run(app.txt_script_remove_events.Value(1:end-2));%run this script if choose to run additional script
+        catch ME
+            % Show error in a pop-up window
+            errordlg(ME.message, 'Runtime Error');
+        end
     end
 
     % Save markers
