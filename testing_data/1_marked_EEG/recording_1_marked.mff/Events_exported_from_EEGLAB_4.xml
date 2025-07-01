@@ -66,4 +66,20 @@
       <segmentationEvent>false</segmentationEvent>
       <keys/>
    </event>
+   <event>
+      <beginTime>2024-07-16T15:24:36.260830-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1</duration>
+      <code>movement-</code>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
+   <event>
+      <beginTime>2024-07-16T15:24:38.260830-04:00</beginTime>
+      <relativeBeginTime>0</relativeBeginTime>
+      <duration>1</duration>
+      <code>talking+</code>
+      <segmentationEvent>false</segmentationEvent>
+      <keys/>
+   </event>
 </eventTrack>

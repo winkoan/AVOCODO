@@ -133,9 +133,9 @@ if nargin < 2
     plotfreqz = result{7};
     if locutoff == 0 && hicutoff == 0 return; end
     if result{8}
-        firtype = 'fir1';
-    else
         firtype = 'firls';
+    else
+        firtype = 'fir1';
     end
 else
     if nargin < 3
