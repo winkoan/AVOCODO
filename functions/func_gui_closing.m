@@ -1,26 +1,29 @@
 function func_gui_closing(app)
-
-% Kill VLC
-vlc = getappdata(app.hand_editing,'vlc');
-fui = getappdata(app.hand_editing,'fui');
-
-if ~isempty(fui) && isvalid(fui)
-    delete(fui.Parent);
+try
+    % Kill VLC
+    vlc = getappdata(app.hand_editing,'vlc');
+    fui = getappdata(app.hand_editing,'fui');
+    
+    if ~isempty(fui) && isvalid(fui)
+        delete(fui.Parent);
+    end
+    
+    if ~isempty(vlc)
+        vlc.quit();
+    end
+    
+    % Save default values
+    default.txt_path_to_data = app.txt_path_data.Value;
+    default.txt_marker_type = app.txt_marker_type.Items;
+    default.txt_script_remove_events = app.txt_script_remove_events.Value;
+    
+    if isdeployed
+        save(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
+    else
+        save(fullfile(pwd,'config','default.mat'),'default');
+    end
+    
+    delete(app)
+catch ME
+    errordlg(ME.message, 'func_gui_closing');
 end
-
-if ~isempty(vlc)
-    vlc.quit();
-end
-
-% Save default values
-default.txt_path_to_data = app.txt_path_data.Value;
-default.txt_marker_type = app.txt_marker_type.Items;
-default.txt_script_remove_events = app.txt_script_remove_events.Value;
-
-if isdeployed
-    save(fullfile(ctfroot,'run_AVOCODO','config','default.mat'),'default');%for compiling
-else
-    save(fullfile(pwd,'config','default.mat'),'default');
-end
-
-delete(app)
