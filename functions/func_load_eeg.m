@@ -75,5 +75,10 @@ try
         fprintf(['\n\n',file_name,' loaded!']);
     end
 catch ME
-    errordlg(ME.message, 'func_load_eeg');
+    if ~isdeployed
+        %errordlg(ME.message, 'func_load_eeg');
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_load_eeg');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
 end
