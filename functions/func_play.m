@@ -6,5 +6,10 @@ try
     
     vlc.play();%play video
 catch ME
-    errordlg(ME.message, 'func_play');
+    if isdeployed
+        %errordlg(ME.message, 'func_load_eeg');
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_play');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
 end

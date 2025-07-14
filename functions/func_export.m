@@ -17,6 +17,7 @@ try
         for idx = 1:length(EEG.event)
             types{idx,1} = EEG.event(idx).type;
         end
+        
         video_events = find(contains(types,'VBeg'));%find beginning of each video
         if isempty(video_events)
             video_events = find(contains(types,'sync'));%find beginning of each video
