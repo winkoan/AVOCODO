@@ -1,6 +1,5 @@
 function func_add_marker_types(app)
 
-<<<<<<< Updated upstream
 % Get input for marker types
 prompt = {'Enter marker types (multiple types separated by comma):'};
 dlgtitle = 'Input';
@@ -21,12 +20,4 @@ try
     app.txt_marker_type.Items = types;
 catch
 
-=======
-catch ME
-    if isdeployed
-        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_add_marker_types');
-    else
-        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
-    end
->>>>>>> Stashed changes
 end

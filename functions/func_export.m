@@ -17,7 +17,6 @@ if strcmp(answer,'Yes')
     for idx = 1:length(EEG.event)
         types{idx,1} = EEG.event(idx).type;
     end
-<<<<<<< Updated upstream
     video_events = find(contains(types,'VBeg'));%find beginning of each video
     
     if ~isempty(tab)%add events if table is not empty
@@ -58,11 +57,6 @@ if strcmp(answer,'Yes')
     if ~isempty(tab)%add events if table is not empty
         writetable(cell2table(tab,'VariableNames',{'type','latency_in_EEG','latency_in_video','# video'}),...
             fullfile(out_path,out_file));
-=======
-catch ME
-    if isdeployed
-        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_export');
->>>>>>> Stashed changes
     else
         writetable(cell2table({'Everything looks good!',EEG.times(end)/1000,app.slide_video.Limits(2),str2num(app.drop_number_videos.Value)},...
             'VariableNames',{'type','latency_in_EEG','latency_in_video','# video'}),...

@@ -32,13 +32,4 @@ if ~isempty(type)
     else
         questdlg('Marker existed at this EEG latency!','Choice','OK','');
     end
-<<<<<<< Updated upstream
-=======
-catch ME
-    if isdeployed
-        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_drop_marker');
-    else
-        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
-    end
->>>>>>> Stashed changes
 end

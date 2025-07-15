@@ -18,16 +18,7 @@ try
     % Set lamp color
     app.lamp_load_eeg.Color = 'r';
     app.lamp_load_video.Color = 'r';
-<<<<<<< Updated upstream
 catch
     
-=======
-catch ME
-    if isdeployed
-        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_update_file_list');
-    else
-        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
-    end
->>>>>>> Stashed changes
 end
 
