@@ -26,7 +26,8 @@ try
     idx_video_sync = find(contains(type, {'sync'})); % First video begins with 'sync'
     
     if ~isempty(idx_video_vbeg)
-        idx_video_all = [idx_video_vbeg(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
+        idx_video_all = idx_video_vbeg;%this is for alpha
+        %idx_video_all = [idx_video_vbeg(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
     elseif ~isempty(idx_video_sync)
             idx_video_all = idx_video_sync;
             % Correct latency if sync is used
