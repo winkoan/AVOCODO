@@ -12,4 +12,13 @@ else
         txt_cmd = ['app.txt_instruction_',num2str(idx),'.Visible=0;'];
         eval(txt_cmd);
     end
+<<<<<<< Updated upstream
+=======
+catch ME
+    if isdeployed
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_show_instructions');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
+>>>>>>> Stashed changes
 end

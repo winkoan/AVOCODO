@@ -5,8 +5,30 @@ tab_data = get(tab,'Data');
 if ~isempty(tab_data)
     tab_data(end,:) = [];%remove last entry
     
+<<<<<<< Updated upstream
     set(tab,'Data',tab_data);%update table
 
     func_add_marker_to_spectrogram(app);%plot markers in spectrogram
+=======
+    if ~isempty(tab_data)
+        if row==0
+            row = size(tab_data,1);%if not specified,remove the last row
+        end
+        tab_redo = [tab_data(row,:);tab_redo];%add to-be-deleted row to the redo table
+        setappdata(app.hand_editing,'table_redo',tab_redo);
+    
+        tab_data(row,:) = [];%remove last entry
+        
+        set(tab,'Data',tab_data);%update table
+    
+        func_add_marker_to_spectrogram(app);%plot markers in spectrogram
+    end
+catch ME
+    if isdeployed
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_undo_marker');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
+>>>>>>> Stashed changes
 end
 

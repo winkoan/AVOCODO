@@ -30,4 +30,14 @@ if ~isempty(tab.Data)
         setappdata(app.hand_editing,'h_marker_txt',h_marker_txt);%update handle
         setappdata(app.hand_editing,'h_marker_lat',h_marker_lat);%update handle
     end
+<<<<<<< Updated upstream
 end
+=======
+catch ME
+    if isdeployed
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_add_marker_to_spectrogram');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
+end
+>>>>>>> Stashed changes

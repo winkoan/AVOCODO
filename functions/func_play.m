@@ -1,4 +1,5 @@
 function func_play(app)
+<<<<<<< Updated upstream
 
 % Get VLC
 vlc = getappdata(app.hand_editing,'vlc');
@@ -22,3 +23,18 @@ vlc.play();%play video
 % 
 %     pause(0.5)
 % end
+=======
+try
+    % Get VLC
+    vlc = getappdata(app.hand_editing,'vlc');
+    window_width = app.number_window_width.Value/2;%seconds
+    
+    vlc.play();%play video
+catch ME
+    if isdeployed
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_play');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
+end
+>>>>>>> Stashed changes
