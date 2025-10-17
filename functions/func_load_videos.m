@@ -25,9 +25,15 @@ try
             videos_path(idx).name));
         idx_video{idx,1} = num2str(idx);
         
-        % Create audio players
-        [audio.data,audio.fs] = audioread(fullfile(videos_path(idx).folder,videos_path(idx).name));
-        audios{idx} = audio;
+        try%in case there is no audio in the video
+            % Create audio players
+            [audio.data,audio.fs] = audioread(fullfile(videos_path(idx).folder,videos_path(idx).name));
+            audios{idx} = audio;
+        catch%if no audio, give all zeros for audio
+            audio.fs = 100;
+            audio.data = zeros(1,round(videos{idx,1}.Duration*audio.fs));
+            audios{idx} = audio;
+        end
     end
     
     % Update number of videos spinner
