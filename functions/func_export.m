@@ -26,7 +26,7 @@ try
         if ~isempty(tab)%add events if table is not empty
             for idx = 1:size(tab,1)%append EEG events
                 EEG.event(end+1).type = tab{idx,1};
-                EEG.event(end).latency = tab{idx,2}*1000;%in ms (eeg latency)
+                EEG.event(end).latency = tab{idx,2}*EEG.srate;%in ms (eeg latency)
     
                 % Add time stamp, so can be saved in .mff format without any issue
                 idx_video = tab{idx,4};
