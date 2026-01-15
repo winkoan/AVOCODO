@@ -23,19 +23,16 @@ try
     % Find indices for video start points VBeg and sync and boundary
     idx_video_vbeg = find(contains(type, {'VBeg'})); % First video begins with 'VBeg'
     idx_video_boundary = find(contains(type, 'boundary')); % Second video starts at 'boundary'
-    idx_video_sync = find(contains(type, {'sync'})); % First video begins with 'sync'
+    %idx_video_sync = find(contains(type, {'sync'})); % First video begins with 'sync'
+    idx_video_sync = find(contains(type, {'SESS'})); % First video begins with 'SESS'
     
     if ~isempty(idx_video_vbeg)
         idx_video_all = idx_video_vbeg;%this is for alpha
         %idx_video_all = [idx_video_vbeg(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
     elseif ~isempty(idx_video_sync)
             idx_video_all = idx_video_sync;
-            % Correct latency if sync is used
-            % Note: this is based on experimental data and that the sync event has a 1000ms duration
-            % Correcting for this 1000ms seems to work better on our data
-            % However, this may not apply to all data
             for idx_v = 1:length(idx_video_all)
-                lat(idx_video_all(idx_v)) = lat(idx_video_all(idx_v)) + 1;%save latency in seconds
+                lat(idx_video_all(idx_v)) = lat(idx_video_all(idx_v));%save latency in seconds
             end
     else
         errordlg('No valid sync markers found!', 'Error');
