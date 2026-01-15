@@ -17,7 +17,7 @@ try
     lat = [];
     for idx = 1:length(EEG.event)
         type{end+1,1} = EEG.event(idx).type;
-        lat(end+1,1) = EEG.event(idx).latency/1000; % Latency in seconds
+        lat(end+1,1) = EEG.event(idx).latency/EEG.srate; % Latency in seconds
     end
     
     % Find indices for video start points VBeg and sync and boundary
@@ -43,7 +43,7 @@ try
     
     video_start_latencies = [];
     for idx_v = 1:length(idx_video_all)
-        video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*1000;%save latency in ms
+        video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*EEG.srate;%save latency in ms
     end
     setappdata(app.hand_editing,'video_start_latencies',video_start_latencies);%update video start latency
     
