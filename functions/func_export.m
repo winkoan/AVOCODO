@@ -7,9 +7,13 @@ try
     if strcmp(answer,'Yes')
         % Get EEG to export
         EEG = getappdata(app.hand_editing,'EEG');
+
+        % Fix missing begintime 
+        EEG = func_fix_missing_begintime(EEG);
     
         % Get table of markers
         tab = get(app.table_markers,'Data');
+        selected_events = getappdata(app.hand_editing,'selected_events');
         
         % Get all event types (can be much faster if using extractfields)
         % But the current code doesn't rely on any specific toolbox
@@ -18,10 +22,7 @@ try
             types{idx,1} = EEG.event(idx).type;
         end
         
-        video_events = find(contains(types,'VBeg'));%find beginning of each video
-        if isempty(video_events)
-            video_events = find(contains(types,'sync'));%find beginning of each video
-        end
+        video_events = selected_events.Index;
         
         if ~isempty(tab)%add events if table is not empty
             for idx = 1:size(tab,1)%append EEG events
@@ -71,6 +72,12 @@ try
                 'VariableNames',{'type','latency_in_EEG','latency_in_video','# video'}),...
                 fullfile(out_path,out_file));
         end
+
+        % Save video latency info
+        out_path = fullfile(app.txt_path_data.Value,'0_markers');%all markers
+        if ~exist(out_path);mkdir(out_path);end
+        out_file = [app.list_eeg_files.Value(1:end-4),'_video_latency.csv'];
+        writetable(selected_events,fullfile(out_path,out_file));
     
         % Save EEG
         fprintf('\n\nSaving EEG... (this may take some time)\n')

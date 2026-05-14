@@ -1,9 +1,5 @@
 function func_choose_video(app,value)
 try
-    app.drop_number_videos.Value = value;
-
-    value = str2num(value);
-
     % Choose video player to set slider
     videos = getappdata(app.hand_editing,'videos');
     audios = getappdata(app.hand_editing,'audios');
@@ -11,11 +7,7 @@ try
 
     % Update the sync status text
     app.txt_video_event.Value = selected_events.Type{value};
-    if length(selected_events.Index) == 1
-        app.num_video_event_index.Value = selected_events.Index;
-    else
-        app.num_video_event_index.Value = selected_events.Index(value);
-    end
+    app.num_video_event_index.Value = selected_events.Index(value);
     
     vlc = getappdata(app.hand_editing,'vlc');
     if ~isempty(vlc)%if vlc exists, quit
@@ -27,6 +19,8 @@ try
     
     app.lamp_load_video.Color = 'r';
     pause(0.5);
+    
+    value = str2num(value);
     
     a = audios{value};
     
@@ -41,14 +35,11 @@ try
     close all%close figure if created (maybe need to figure out why it was created...)
     
     % Add a dashed line
-    color_light_brown = '#c39d85';
-    color_dark_brown = '#532915';
+    color_brown = '#c39d85';
     hold(app.axis_spectrogram,'on');
     ylim = get(app.axis_spectrogram,'ylim');
-    h_line_2 = plot(app.axis_spectrogram,[0,0],ylim,'-','linewidth',2,'color',color_dark_brown);
-    h_line = plot(app.axis_spectrogram,[0,0],ylim,'--','linewidth',2,'color',color_light_brown);
+    h_line = plot(app.axis_spectrogram,[0,0],ylim,'--','linewidth',2,'color',color_brown);
     setappdata(app.hand_editing,'h_line',h_line);
-    setappdata(app.hand_editing,'h_line_2',h_line_2);
     
     % Choose video path
     videos_path = getappdata(app.hand_editing,'videos_path');

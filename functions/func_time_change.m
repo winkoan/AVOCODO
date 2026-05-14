@@ -20,7 +20,9 @@ try
     set(app.axis_spectrogram,'xlim',xlim);
     
     % Update dashed line
+    h_line_2 = getappdata(app.hand_editing,'h_line_2');
     h_line = getappdata(app.hand_editing,'h_line');
+    h_line_2.XData = [value,value];
     h_line.XData = [value,value];
     
     setappdata(app.hand_editing,'vlc',vlc);

@@ -7,6 +7,7 @@ try
     h_stem_eeg = getappdata(app.hand_editing,'h_stem_eeg');
     h_marker_txt_eeg = getappdata(app.hand_editing,'h_marker_txt_eeg');
     h_marker_lat_eeg = getappdata(app.hand_editing,'h_marker_lat_eeg');
+    selected_events = getappdata(app.hand_editing,'selected_events');
     
     delete(h_stem_eeg);%clear handle
     delete(h_marker_txt_eeg);%clear handle
@@ -20,31 +21,13 @@ try
         lat(end+1,1) = EEG.event(idx).latency/EEG.srate; % Latency in seconds
     end
     
-    % Find indices for video start points VBeg and sync and boundary
-    idx_video_vbeg = find(contains(type, {'VBeg'})); % First video begins with 'VBeg'
-    idx_video_boundary = find(contains(type, 'boundary')); % Second video starts at 'boundary'
-    %idx_video_sync = find(contains(type, {'sync'})); % First video begins with 'sync'
-    idx_video_sync = find(contains(type, {'SESS'})); % First video begins with 'SESS'
-    
-    if ~isempty(idx_video_vbeg)
-        idx_video_all = idx_video_vbeg;%this is for alpha
-        %idx_video_all = [idx_video_vbeg(1);idx_video_boundary];%Use first 'VBeg' and all boundaries
-    elseif ~isempty(idx_video_sync)
-            idx_video_all = idx_video_sync;
-            for idx_v = 1:length(idx_video_all)
-                lat(idx_video_all(idx_v)) = lat(idx_video_all(idx_v));%save latency in seconds
-            end
-    else
-        errordlg('No valid sync markers found!', 'Error');
-    end
-    
     video_start_latencies = [];
-    for idx_v = 1:length(idx_video_all)
-        video_start_latencies(idx_v) = lat(idx_video_all(idx_v))*EEG.srate;%save latency in ms
+    for idx_v = 1:size(selected_events,1)
+        video_start_latencies(idx_v) = lat(selected_events.Index(idx_v))*1000;%save latency in ms
     end
     setappdata(app.hand_editing,'video_start_latencies',video_start_latencies);%update video start latency
     
-    offset = lat(idx_video_all(idx_video));
+    offset = lat(selected_events.Index(idx_video));%offset for the current video
     lat = lat - offset; % Apply the offset to all latencies
     
     % Stem plot 

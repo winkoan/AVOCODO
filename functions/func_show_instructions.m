@@ -1,6 +1,6 @@
 function func_show_instructions(app)
 try
-    num_items = 9;
+    num_items = 10;
     
     if strcmp(app.switch_instructions.Value,'On')
         for idx = 1:num_items
