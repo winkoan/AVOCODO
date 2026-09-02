@@ -18,7 +18,7 @@ try
     % Set lamp color
     app.lamp_load_eeg.Color = 'r';
     app.lamp_load_video.Color = 'r';
-catch
-    
+catch ME
+    errordlg(ME.message, 'func_update_file_list');
 end
 
