@@ -25,5 +25,9 @@ try
     
     delete(app)
 catch ME
-    errordlg(ME.message, 'func_gui_closing');
+    if ~isdeployed
+        errordlg(getReport(ME, 'extended', 'hyperlinks', 'on'), 'func_gui_closing');
+    else
+        fprintf('%s\n', getReport(ME, 'extended', 'hyperlinks', 'on'));
+    end
 end
